@@ -29,8 +29,8 @@
 				return '<script src="' . $fpath . '"></script>';
 				break;
 			default : 
-				echo "No tag specified? How? What even? You really shouldn't be seeing this.
-				<br>I'd recommend you go buy yourself an SSL certificate from SSL.com";
+				echo 'No tag specified? How? What even? You really shouldn\'t be seeing this.
+				<br>I\'d recommend you go buy yourself an SSL certificate from <a href="https://www.ssl.com">SSL.com</a>';
 		}
 		
 	}
