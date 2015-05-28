@@ -14,4 +14,6 @@
         <a href="?page=sslcom_cc&tab=css" class="nav-tab <?php echo $active_tab == 'css' ? 'nav-tab-active' : ''; ?>">CSS</a>
         <a href="?page=sslcom_cc&tab=js" class="nav-tab <?php echo $active_tab == 'js' ? 'nav-tab-active' : ''; ?>">JavaScript</a>  
     </h2>
+
+    <?php if($active_tab !== "welcome") include_once(dirname(__FILE__) . '\\' . "list_code.php"); ?>
 </div> 
