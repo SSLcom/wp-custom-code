@@ -39,4 +39,23 @@
 	add_shortcode('php', 'return_code');
 	add_shortcode('css', 'return_code');
 	add_shortcode('js', 'return_code');
+
+	/* Add Menus
+	-----------------------------------------------------------------*/
+	add_action('admin_menu', 'ch_essentials_admin');
+	function ch_essentials_admin() {
+	    /* Base Menu */
+	    add_menu_page(
+	    'SSL.com Custom Code',
+	    'SSL.com Custom Code',
+	    'manage_options',
+	    'sslcom_cc',
+	    'sslcom_cc_index');
+	}
+
+	/* Display Page
+	-----------------------------------------------------------------*/
+	function sslcom_cc_index() {
+		include_once(dirname(__FILE__) . '\\' . "options.php");
+	}
 ?>
