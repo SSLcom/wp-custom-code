@@ -1,4 +1,7 @@
-<table style="width: 100%">
+<br>
+<a href="?page=sslcom_cc&tab=<?php echo $active_tab ?>&new" class="button button-primary button-large">Create new .<?php echo $active_tab ?> file</a>
+<br><br>
+<table class="wp-list-table widefat fixed striped">
 	<thead>
 		<th style="text-align: left;">File name</th>
 		<th style="text-align: right;">Edit Options</th>
@@ -9,9 +12,10 @@
 			    while (false !== ($entry = readdir($handle))) {
 			        if ($entry != "." && $entry != "..") {
 			        	echo "<tr>";
-			            echo "<td style='width:80%'>$entry</td>";
-			            echo '<td style="text-align: right;"><a href="">Edit</a> <a href="">Delete</a><td>';
-			            echo "</tr>";
+			            echo "<td>$entry</td>";
+			            echo '<td style="text-align: right;"><a href="?page=sslcom_cc&tab=' . $active_tab . '&edit=' . $entry . '">Edit</a> ';
+			            echo '<a href="?page=sslcom_cc&tab=' . $active_tab . '&edit=' . $entry . '">Delete</a></td>';
+			            echo '</tr>';
 			        }
 			    }
 			    closedir($handle);

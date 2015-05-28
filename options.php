@@ -16,7 +16,18 @@
     </h2>
 
     <?php
-    	if($active_tab !== "welcome") include_once(dirname(__FILE__) . '\\' . "list_code.php");
-    	else include_once(dirname(__FILE__) . '\\' . "welcome.php");
+        if (isset($_GET['new'])) {
+
+        }
+        elseif (isset($_GET['edit']) && $_GET['edit'] !== '') {
+
+        }
+        elseif (isset($_GET['delete']) && $_GET['delete'] !== '') {
+            
+        }
+        else {
+        	if($active_tab !== "welcome") include_once(dirname(__FILE__) . '\\' . "list_code.php");
+        	else include_once(dirname(__FILE__) . "\\fragments\\welcome.php");
+        }
 	?>
-</div> 
+</div>
