@@ -1,5 +1,5 @@
 <br>
-<a href="?page=sslcom_cc&tab=<?php echo $active_tab ?>&new" class="button button-primary button-large">Create new .<?php echo $active_tab ?> file</a>
+<a href="?page=sslcom_cc&tab=<?php echo $active_tab ?>&edit" class="button button-primary button-large">Create new .<?php echo $active_tab ?> file</a>
 <br><br>
 <table class="wp-list-table widefat fixed striped">
 	<thead>

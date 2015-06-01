@@ -21,15 +21,18 @@
 	}
 	if (isset($_POST["title"])) {
 		$writeFile = dirname(dirname(__FILE__)) . "\\" . $active_tab . "\\" . $_POST["title"];
-		file_put_contents($writeFile, $_POST["code"]);
-		redirect(str_replace($_GET["edit"], $_POST["title"], getCurrentURL()));
+		$code = stripslashes($_POST["code"]);
+		file_put_contents($writeFile, $code);
+		if ($_GET["edit"] !== "") redirect(str_replace($_GET["edit"], $_POST["title"], getCurrentURL()));
+		else redirect(getCurrentURL() . "=" . $_POST["title"]);
 	}
 	$codeFile = dirname(dirname(__FILE__)) . "\\" . $active_tab . "\\" . $_GET["edit"];
 	echo '<form method="post" action="">';
-	echo '<input type="text" name="title" size="30" id="title" spellcheck="true" autocomplete="off" value="'. $_GET["edit"] . '">';
+	echo '<input type="text" name="title" size="30" id="title" spellcheck="true" autocomplete="off" value="'. (($_GET["edit"] !== "") ? $_GET["edit"] : "") . '">';
+	$code = file_get_contents($codeFile);
 ?>
 <br><br>
-<textarea name="code" rows="10" cols="30"><?php echo file_get_contents($codeFile); ?></textarea>
+<textarea name="code" rows="10" cols="30"><?php if ($_GET["edit"] !== "") echo $code; ?></textarea>
 <br>
 <button class="button button-primary button-large">Save .<?php echo $active_tab ?> file</button>
 </form>

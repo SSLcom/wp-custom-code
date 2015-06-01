@@ -16,10 +16,7 @@
     </h2>
 
     <?php
-        if (isset($_GET['new'])) {
-
-        }
-        elseif (isset($_GET['edit']) && $_GET['edit'] !== '') {
+        if (isset($_GET['edit'])) {
             include_once(dirname(__FILE__) . "\\fragments\\edit_code.php");
         }
         elseif (isset($_GET['delete']) && $_GET['delete'] !== '') {
