@@ -1,3 +1,7 @@
 body {
 	color: red !important;
 }
+
+body:before {
+        content: 'This is the default css inserted by the SSL.com Custom Code plugin. Looks like you forgot to put the name of the file you wanted to insert.  Example: [css name=file.css]';
+}

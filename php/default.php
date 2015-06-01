@@ -1,5 +1,1 @@
-<?php
-
-	echo 'hello world';
-
-?>
+<p>This is the default php inserted by the <a href="https://www.ssl.com">SSL.com</a> Custom Code plugin. <br>Looks like you forgot to put the name of the file you wanted to insert. <br> Example: [php name=file.php]</p>
