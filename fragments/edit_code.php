@@ -31,11 +31,10 @@
 	//Load code to screen
 	$codeFile = dirname(dirname(__FILE__)) . "\\" . $active_tab . "\\" . $_GET["edit"];
 	echo '<form method="post" action="">';
-	echo '<input type="text" name="title" size="30" id="title" spellcheck="true" autocomplete="off" value="'. (($_GET["edit"] !== "") ? $_GET["edit"] : "") . '">';
-	$code = file_get_contents($codeFile);
+	echo '<input type="text" name="title" size="30" id="title" spellcheck="true" autocomplete="off" placeholder="Enter file name here" value="'. (($_GET["edit"] !== "") ? $_GET["edit"] : "") . '">';
 ?>
 <br><br>
-<textarea name="code" rows="10" cols="30"><?php if ($_GET["edit"] !== "") echo $code; ?></textarea>
+<textarea name="code" rows="10" cols="30" placeholder="Enter code here"><?php if ($_GET["edit"] !== "") echo file_get_contents($codeFile); ?></textarea>
 <br>
 <button class="button button-primary button-large">Save .<?php echo $active_tab ?> file</button>
 </form>
