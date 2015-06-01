@@ -8,7 +8,7 @@
 	</thead>
 	<tbody>
 		<?php
-			if ($handle = opendir(dirname(__FILE__) . '\\'  . $active_tab)) {
+			if ($handle = opendir(dirname(__FILE__) . '/'  . $active_tab)) {
 			    while (false !== ($entry = readdir($handle))) {
 			        if ($entry != "." && $entry != ".." && $entry !== "default." . $active_tab) {
 			        	echo "<tr>";
