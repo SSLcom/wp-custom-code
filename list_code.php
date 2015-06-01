@@ -14,7 +14,7 @@
 			        	echo "<tr>";
 			            echo "<td>$entry</td>";
 			            echo '<td style="text-align: right;"><a href="?page=sslcom_cc&tab=' . $active_tab . '&edit=' . $entry . '">Edit</a> ';
-			            echo '<a href="?page=sslcom_cc&tab=' . $active_tab . '&edit=' . $entry . '">Delete</a></td>';
+			            echo '<a href="?page=sslcom_cc&tab=' . $active_tab . '&delete=' . $entry . '">Delete</a></td>';
 			            echo '</tr>';
 			        }
 			    }

@@ -16,11 +16,10 @@
     </h2>
 
     <?php
-        if (isset($_GET['edit'])) {
-            include_once(dirname(__FILE__) . "\\fragments\\edit_code.php");
-        }
+        if (isset($_GET['edit'])) include_once(dirname(__FILE__) . "\\fragments\\edit_code.php");
         elseif (isset($_GET['delete']) && $_GET['delete'] !== '') {
-            
+            unlink(dirname(__FILE__) . "\\".$active_tab."\\".$_GET['delete']);
+            include_once(dirname(__FILE__) . '\\' . "list_code.php");
         }
         else {
         	if($active_tab !== "welcome") include_once(dirname(__FILE__) . '\\' . "list_code.php");
