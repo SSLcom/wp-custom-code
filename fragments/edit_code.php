@@ -1,22 +1,13 @@
 <br>
 <?php
 	function getCurrentURL() {
-	    $currentURL = (@$_SERVER["HTTPS"] == "on") ? "https://" : "http://";
-	    $currentURL .= $_SERVER["SERVER_NAME"];
-	 
-	    if($_SERVER["SERVER_PORT"] != "80" && $_SERVER["SERVER_PORT"] != "443")
-	        $currentURL .= ":".$_SERVER["SERVER_PORT"];
+	    $currentURL = get_site_url();
 	 
         $currentURL .= $_SERVER["REQUEST_URI"];
 	    return $currentURL;
 	}
 	function redirect($url) {
-		if (headers_sent()){
-			die('<script type="text/javascript">window.location.href="' . $url . '";</script>');
-		}else{
-			header('Location: ' . $url);
-			die();
-		}    
+		echo '<script type="text/javascript">window.location.href="' . $url . '";</script>';
 	}
 	//Write code to file
 	if (isset($_POST["title"])) {
