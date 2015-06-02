@@ -3,7 +3,7 @@
 	Plugin Name: SSL.com Custom Code
 	Plugin URI: https://www.ssl.com
 	Description: A plugin by SSL.com that allows you to insert custom HTML, PHP, CSS, and JavaScript via shortcodes
-	Version: 0.2
+	Version: 0.2.1
 	Author: SSL.com
 	Author URI: https://www.ssl.com
 	License: MIT
