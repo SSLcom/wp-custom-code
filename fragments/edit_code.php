@@ -1,8 +1,8 @@
 <br>
 <?php
+	$code = "";
 	function getCurrentURL() {
 	    $currentURL = get_site_url();
-	 
         $currentURL .= $_SERVER["REQUEST_URI"];
 	    return $currentURL;
 	}
