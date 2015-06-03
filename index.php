@@ -13,7 +13,7 @@
 
 	function return_code($atts, $content = null, $tag) {
 		$a = shortcode_atts(array('name'=>'default'), $atts);
-		$fpath = dirname(__FILE__) . '/' . $tag . '/' . $a['name'] . '.' . $tag;
+		$fpath = realpath(dirname(__FILE__) . '/' . $tag . '/' . $a['name'] . '.' . $tag);
 		switch($tag) {
 			case "html";
 			case "php" : 
@@ -56,6 +56,6 @@
 	/* Display Page
 	-----------------------------------------------------------------*/
 	function sslcom_cc_index() {
-		include_once(dirname(__FILE__) . '/' . "options.php");
+		include_once(realpath(dirname(__FILE__) . '/' . "options.php"));
 	}
 ?>

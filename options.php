@@ -17,26 +17,26 @@
     </h2>
 
     <?php
-        if (isset($_GET['edit'])) include_once(dirname(__FILE__) . "/fragments/edit_code.php");
+        if (isset($_GET['edit'])) include_once(realpath(dirname(__FILE__) . "/fragments/edit_code.php"));
         elseif (isset($_GET['delete']) && $_GET['delete'] !== '') {
-            $file = dirname(__FILE__) . "/" . $active_tab . "/" . $_GET['delete'];
+            $file = realpath(dirname(__FILE__) . "/" . $active_tab . "/" . $_GET['delete']);
             if (file_exists($file)) {
                 unlink($file);
-                include_once(dirname(__FILE__) . '/fragments/list_code.php');
+                include_once(realpath(dirname(__FILE__) . '/fragments/list_code.php'));
             }
         }
         else {
             switch ($active_tab) {
                 case "welcome" :
-                    include_once(dirname(__FILE__) . "/fragments/welcome.php");
+                    include_once(realpath(dirname(__FILE__) . "/fragments/welcome.php"));
                     break;
 
                 case "bundle" :
-                    include_once(dirname(__FILE__) . "/fragments/bundle_handler.php");
+                    include_once(realpath(dirname(__FILE__) . "/fragments/bundle_handler.php"));
                     break;
 
                 default :
-                    include_once(dirname(__FILE__) . '/fragments/list_code.php');
+                    include_once(realpath(dirname(__FILE__) . '/fragments/list_code.php'));
                     break;
             }
         }

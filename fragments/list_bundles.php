@@ -9,7 +9,7 @@
 	</thead>
 	<tbody>
 		<?php
-			if ($handle = opendir(dirname(__FILE__) . '/bundle')) {
+			if ($handle = opendir(realpath(dirname(__FILE__) . '/bundle'))) {
 			    while (false !== ($entry = readdir($handle))) {
 			        if ($entry != "." && $entry != ".." && $entry !== "default." . $active_tab) {
 			        	echo "<tr>";
