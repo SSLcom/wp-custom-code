@@ -9,8 +9,6 @@
 	License: MIT
 	*/
 
-	$path = dirname(__FILE__);
-
 	function return_code($atts, $content = null, $tag) {
 		$a = shortcode_atts(array('name'=>'default'), $atts);
 		$fpath = realpath(dirname(__FILE__) . '/' . $tag . '/' . $a['name'] . '.' . $tag);
