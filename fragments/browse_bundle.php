@@ -1,5 +1,6 @@
 <br>
-<a href="?page=sslcom_cc&tab=<?php echo $active_tab ?>&bundle<?php echo $_GET['bundle'] ?>" class="button button-primary button-large">Create new bundle</a>
+<a href="?page=sslcom_cc&tab=<?php echo $active_tab ?>&bundle<?php echo $_GET['bundle'] ?>" class="button button-primary button-large">Create new folder</a>
+<a href="?page=sslcom_cc&tab=<?php echo $active_tab ?>&bundle<?php echo $_GET['bundle'] ?>" class="button button-primary button-large">Create new file</a>
 <br><br>
 <table class="wp-list-table widefat fixed striped">
 	<thead>
