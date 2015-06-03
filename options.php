@@ -9,7 +9,7 @@
 
     <h2 class="nav-tab-wrapper">  
         <a href="?page=sslcom_cc&tab=welcome" class="nav-tab <?php echo $active_tab == 'welcome' ? 'nav-tab-active' : ''; ?>">Welcome</a>
-        <a href="?page=sslcom_cc&tab=bundle" class="nav-tab <?php echo $active_tab == 'bundle' ? 'nav-tab-active' : ''; ?>"></a>  
+        <a href="?page=sslcom_cc&tab=bundle" class="nav-tab <?php echo $active_tab == 'bundle' ? 'nav-tab-active' : ''; ?>">Bundles</a>  
         <a href="?page=sslcom_cc&tab=html" class="nav-tab <?php echo $active_tab == 'html' ? 'nav-tab-active' : ''; ?>">HTML</a>  
         <a href="?page=sslcom_cc&tab=php" class="nav-tab <?php echo $active_tab == 'php' ? 'nav-tab-active' : ''; ?>">PHP</a>
         <a href="?page=sslcom_cc&tab=css" class="nav-tab <?php echo $active_tab == 'css' ? 'nav-tab-active' : ''; ?>">CSS</a>
