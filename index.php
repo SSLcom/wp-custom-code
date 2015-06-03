@@ -9,9 +9,15 @@
 	License: MIT
 	*/
 
+	$path = dirname(__FILE__);
+
+	function normalizePath($path) {
+        return str_replace(array('/', '\\'), DIRECTORY_SEPARATOR, $path);
+    }
+
 	function return_code($atts, $content = null, $tag) {
 		$a = shortcode_atts(array('name'=>'default'), $atts);
-		$fpath = realpath(dirname(__FILE__) . '/' . $tag . '/' . $a['name'] . '.' . $tag);
+		$fpath = normalizePath($path . '/' . $tag . '/' . $a['name'] . '.' . $tag);
 		switch($tag) {
 			case "html";
 			case "php" : 
@@ -54,6 +60,6 @@
 	/* Display Page
 	-----------------------------------------------------------------*/
 	function sslcom_cc_index() {
-		include_once(realpath(dirname(__FILE__) . '/' . "options.php"));
+		include_once(normalizePath($path . '/' . "options.php"));
 	}
 ?>
