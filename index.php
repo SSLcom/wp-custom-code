@@ -11,13 +11,13 @@
 
 	$path = dirname(__FILE__);
 
-	function normalizePath($path) {
+	function correctpath($path) {
         return str_replace(array('/', '\\'), DIRECTORY_SEPARATOR, $path);
     }
 
 	function return_code($atts, $content = null, $tag) {
 		$a = shortcode_atts(array('name'=>'default'), $atts);
-		$fpath = normalizePath($path . '/' . $tag . '/' . $a['name'] . '.' . $tag);
+		$fpath = correctpath($path . '/' . $tag . '/' . $a['name'] . '.' . $tag);
 		switch($tag) {
 			case "html";
 			case "php" : 
@@ -60,6 +60,6 @@
 	/* Display Page
 	-----------------------------------------------------------------*/
 	function sslcom_cc_index() {
-		include_once(normalizePath($path . '/' . "options.php"));
+		include_once(correctpath($path . '/' . "options.php"));
 	}
 ?>

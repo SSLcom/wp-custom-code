@@ -18,26 +18,26 @@
     </h2>
 
     <?php
-        if (isset($_GET['edit'])) include_once(normalizePath($path . "/fragments/edit_code.php"));
+        if (isset($_GET['edit'])) include_once(correctpath($path . "/fragments/edit_code.php"));
         elseif (isset($_GET['delete']) && $_GET['delete'] !== '' && $active_tab !== 'bundle') {
-            $file = normalizePath($path . "/" . $active_tab . "/" . $_GET['delete']);
+            $file = correctpath($path . "/" . $active_tab . "/" . $_GET['delete']);
             if (file_exists($file)) {
                 unlink($file);
-                include_once(normalizePath($path . '/fragments/list_code.php'));
+                include_once(correctpath($path . '/fragments/list_code.php'));
             }
         }
         else {
             switch ($active_tab) {
                 case "welcome" :
-                    include_once(normalizePath($path . "/fragments/welcome.php"));
+                    include_once(correctpath($path . "/fragments/welcome.php"));
                     break;
 
                 case "bundle" :
-                    include_once(normalizePath($path . "/fragments/bundle_handler.php"));
+                    include_once(correctpath($path . "/fragments/bundle_handler.php"));
                     break;
 
                 default :
-                    include_once(normalizePath($path . '/fragments/list_code.php'));
+                    include_once(correctpath($path . '/fragments/list_code.php'));
                     break;
             }
         }
