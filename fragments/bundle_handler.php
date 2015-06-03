@@ -1,6 +1,7 @@
 <?php
+$path = dirname(__FILE__);
 if (isset($_GET['delete'])) {
-	$folder = correctpath($path . "/bundle/" . $_GET['delete']);
+	$folder = correctpath($root . "/bundle/" . $_GET['delete']);
 	if (is_dir($folder)) {
 		rmdir($folder);
 		include_once(correctpath($path . '/list_bundles.php'));

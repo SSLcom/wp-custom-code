@@ -9,7 +9,7 @@
 	</thead>
 	<tbody>
 		<?php
-			if ($handle = opendir(correctpath($path . '/'  . $active_tab))) {
+			if ($handle = opendir(correctpath($root . '/'  . $active_tab))) {
 			    while (false !== ($entry = readdir($handle))) {
 			        if ($entry != "." && $entry != ".." && $entry !== "default." . $active_tab) {
 			        	echo "<tr>";

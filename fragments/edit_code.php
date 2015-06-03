@@ -14,7 +14,7 @@
 		$code = stripslashes($_POST["code"]);
 		//Check to see if file name is valid
 		if ($_POST["title"] !== "" && !preg_match("/[^0-9A-Z.\-_]/i", $_POST["title"])) {
-			$writeFile = correctpath(dirname($path) . "/" . $active_tab . "/" . $_POST["title"]);
+			$writeFile = correctpath(dirname($root) . "/" . $active_tab . "/" . $_POST["title"]);
 			file_put_contents($writeFile, $code);
 			//Redirect to edit inputted file name
 			if ($_GET["edit"] !== "") redirect(str_replace($_GET["edit"], $_POST["title"], getCurrentURL()));
@@ -23,7 +23,7 @@
 		else echo "File name is invalid";
 	}
 	//Load code to screen
-	$codeFile = correctpath(dirname($path) . "/" . $active_tab . "/" . $_GET["edit"]);
+	$codeFile = correctpath(dirname($root) . "/" . $active_tab . "/" . $_GET["edit"]);
 	echo '<form method="post" action="">';
 	echo '<input type="text" name="title" size="30" id="title" spellcheck="true" autocomplete="off" placeholder="Enter file name here" value="'. (($_GET["edit"] !== "") ? $_GET["edit"] : "") . '">';
 	if ($_GET["edit"] !== "" && !isset($code)) $code = file_get_contents($codeFile);

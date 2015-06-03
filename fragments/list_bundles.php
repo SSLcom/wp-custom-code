@@ -1,4 +1,4 @@
-w<br>
+<br>
 <a href="?page=sslcom_cc&tab=<?php echo $active_tab ?>&bundle" class="button button-primary button-large">Create new bundle</a>
 <br><br>
 <table class="wp-list-table widefat fixed striped">
@@ -9,8 +9,7 @@ w<br>
 	</thead>
 	<tbody>
 		<?php
-			echo $path;
-			if ($handle = opendir(correctpath($path . '/bundle'))) {
+			if ($handle = opendir(correctpath($root . '/bundle'))) {
 			    while (false !== ($entry = readdir($handle))) {
 			        if ($entry != "." && $entry != ".." && $entry !== "default." . $active_tab) {
 			        	echo "<tr>";

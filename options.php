@@ -5,7 +5,7 @@
 
     <?php  
         $active_tab = isset( $_GET[ 'tab' ] ) ? $_GET[ 'tab' ] : 'welcome';  
-        $path = dirname(__FILE__);
+        $root = dirname(__FILE__);
     ?>  
 
     <h2 class="nav-tab-wrapper">  
@@ -18,26 +18,26 @@
     </h2>
 
     <?php
-        if (isset($_GET['edit'])) include_once(correctpath($path . "/fragments/edit_code.php"));
+        if (isset($_GET['edit'])) include_once(correctpath($root . "/fragments/edit_code.php"));
         elseif (isset($_GET['delete']) && $_GET['delete'] !== '' && $active_tab !== 'bundle') {
-            $file = correctpath($path . "/" . $active_tab . "/" . $_GET['delete']);
+            $file = correctpath($root . "/" . $active_tab . "/" . $_GET['delete']);
             if (file_exists($file)) {
                 unlink($file);
-                include_once(correctpath($path . '/fragments/list_code.php'));
+                include_once(correctpath($root . '/fragments/list_code.php'));
             }
         }
         else {
             switch ($active_tab) {
                 case "welcome" :
-                    include_once(correctpath($path . "/fragments/welcome.php"));
+                    include_once(correctpath($root . "/fragments/welcome.php"));
                     break;
 
                 case "bundle" :
-                    include_once(correctpath($path . "/fragments/bundle_handler.php"));
+                    include_once(correctpath($root . "/fragments/bundle_handler.php"));
                     break;
 
                 default :
-                    include_once(correctpath($path . '/fragments/list_code.php'));
+                    include_once(correctpath($root . '/fragments/list_code.php'));
                     break;
             }
         }
