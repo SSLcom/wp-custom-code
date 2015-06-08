@@ -24,10 +24,12 @@
 			        	echo "<tr>";
 			            echo "<td>$entry</td>";
 			            echo '<td style="text-align: right;">';
-			            $presub .= '&sub' . $i . '=' . $entry;
-			            if (is_file(correctpath($path . "/" . $entry))) echo '<a href="?page=sslcom_cc&tab=' . $active_tab . '&bundle=' . $_GET['bundle'] . '&edit=' . $entry .  '">Edit</a> ';
-			            else echo '<a href="?page=sslcom_cc&tab=' . $active_tab . '&bundle=' . $_GET['bundle'] . $presub . '">Browse</a> ';
-			            echo '<a href="?page=sslcom_cc&tab=' . $active_tab . '&delete=' . $entry . '">Delete</a>';
+			            if (is_file(correctpath($path . "/" . $entry))) echo '<a href="?page=sslcom_cc&tab=' . $active_tab . '&bundle=' . $_GET['bundle'] . $presub . '&edit=' . $entry . '">Edit</a> ';
+			            else {
+			            	$sub = $presub . '&sub' . $i . '=' . $entry;
+			            	echo '<a href="?page=sslcom_cc&tab=' . $active_tab . '&bundle=' . $_GET['bundle'] . $sub . '">Browse</a> ';
+			            }
+			            echo '<a href="?page=sslcom_cc&tab=' . $active_tab .$presub . '&delete=' . $entry . '">Delete</a>';
 			            echo '</td>';
 			            echo '</tr>';
 			        }
