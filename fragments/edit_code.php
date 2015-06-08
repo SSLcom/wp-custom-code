@@ -24,7 +24,8 @@
 		$code = stripslashes($_POST["code"]);
 		//Check to see if file name is valid
 		if ($_POST["title"] !== "" && !preg_match("/[^0-9A-Z.\-_]/i", $_POST["title"])) {
-			$writeFile = correctpath($root . "/" . $active_tab . "/" . $_POST["title"]);
+			if (isset($_GET['bundle'])) $writeFile = correctpath($prepath . '/' . $_POST["title"]);
+			else $writeFile = correctpath($root . "/" . $active_tab . "/" . $_POST["title"]);
 			file_put_contents($writeFile, $code);
 			//Redirect to edit inputted file name
 			if ($_GET["edit"] !== "") redirect(str_replace($_GET["edit"], $_POST["title"], getCurrentURL()));
