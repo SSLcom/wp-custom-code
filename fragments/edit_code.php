@@ -33,12 +33,8 @@
 		else echo "File name is invalid";
 	}
 	//Load code to screen
-	if (isset($_GET['bundle'])) {
-		$codeFile = correctpath($prepath . '/' . $_GET['edit']);
-		
-	} 
+	if (isset($_GET['bundle'])) $codeFile = correctpath($prepath . '/' . $_GET['edit']);
 	else $codeFile = correctpath($root . "/" . $active_tab . "/" . $_GET["edit"]);
-	echo $codeFile;
 	echo '<form method="post" action="">';
 	echo '<input type="text" name="title" size="30" id="title" spellcheck="true" autocomplete="off" placeholder="Enter file name here" value="'. (($_GET["edit"] !== "") ? $_GET["edit"] : "") . '">';
 	if ($_GET["edit"] !== "" && (!isset($code) || $code == "")) $code = file_get_contents($codeFile);
