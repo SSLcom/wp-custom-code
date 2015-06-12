@@ -62,7 +62,12 @@
 				$fpath = correctpath(dirname(__FILE__) . '/' . $tag . '/' . $a['name']);
 				$hasafile = false;
 				if (is_dir($fpath)) {
-					$fpriority = ["index.php", "index.html", "default.php", "default.html", $a['name'] . ".php", $a['name'] . ".html"];
+					$fpriority = array("index.php", 
+					"index.html", 
+					"default.php", 
+					"default.html", 
+					$a['name'] . ".php", 
+					$a['name'] . ".html");
 					foreach($fpriority as $f) {
 						if (file_exists($fpath . '/' . $f)) {
 							include_once($fpath . '/' . $f);
