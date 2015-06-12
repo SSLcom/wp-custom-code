@@ -23,6 +23,7 @@
             $file = correctpath($root . "/" . $active_tab . "/" . $_GET['delete']);
             if (file_exists($file)) {
                 unlink($file);
+                echo '<div class="updated"><p>$file has been deleted</p></div>';
                 include_once(correctpath($root . '/fragments/list_code.php'));
             }
         }
