@@ -21,7 +21,7 @@
 	}
 	//Write code to file
 	if (isset($_POST["title"])) {
-		$code = stripslashes($_POST["code"]);
+		$code = htmlspecialchars_decode(stripslashes($_POST["code"]));
 		//Check to see if file name is valid
 		if ($_POST["title"] !== "" && !preg_match("/[^0-9A-Z.\-_]/i", $_POST["title"])) {
 			if (isset($_GET['bundle'])) $writeFile = correctpath($prepath . '/' . $_POST["title"]);
@@ -39,6 +39,7 @@
 	echo '<form method="post" action="">';
 	echo '<input type="text" name="title" size="30" id="title" spellcheck="true" autocomplete="off" placeholder="Enter file name here" value="'. (($_GET["edit"] !== "") ? $_GET["edit"] : "") . '">';
 	if ($_GET["edit"] !== "" && (!isset($code) || $code == "")) $code = file_get_contents($codeFile);
+	$code = htmlspecialchars($code);
 ?>
 <br><br>
 <textarea name="code" rows="10" cols="30" placeholder="Enter code here"><?php echo $code ?></textarea>

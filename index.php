@@ -31,7 +31,7 @@
     function getAbsPath($fstring, $name){
     	$cstring = __FILE__;
     	$cstr = urifriendly(preg_replace("#[A-Z]:[\\\/]#", '', $cstring));
-    	$bloc = get_site_url() . '/wp-content/plugins/sslcom-custom-code/bundle/' . $name; 
+    	$bloc = plugins_url() . '/sslcom-custom-code/bundle/' . $name; 
     	$fpath = getPubPath($fstring);
     	if (strhas($fpath, '../')){
     		$lpos = strrpos($fpath, '../') + 3;
@@ -84,11 +84,11 @@
 				else echo "The file name you have entered does not exist.";
 				break;
 			case "css" : 
-				$fpath = get_site_url() . '/wp-content/plugins/sslcom-custom-code/' . $tag . '/' . $a['name'] . '.' . $tag;
+				$fpath = plugins_url() . '/sslcom-custom-code/' . $tag . '/' . $a['name'] . '.' . $tag;
 				return '<link rel="stylesheet" href="' . $fpath . '">';
 				break;
 			case "js" : 
-				$fpath = get_site_url() . '/wp-content/plugins/sslcom-custom-code/' . $tag . '/' . $a['name'] . '.' . $tag;
+				$fpath = plugins_url() . '/sslcom-custom-code/' . $tag . '/' . $a['name'] . '.' . $tag;
 				return '<script src="' . $fpath . '"></script>';
 				break;
 			default : 
