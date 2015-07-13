@@ -1,0 +1,181 @@
+/* Home */
+
+.home-banner {
+    color: #F5F7FA;
+    background: url(../images/gplaypatternblack.png);
+    background-repeat: repeat;
+    padding: 20px;
+}
+
+.home-banner h1,
+.home-banner h2,
+.home-banner h3,
+.home-banner h1 .green,
+.home-banner h3 .green {
+    margin: 0px 5px;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.50);
+    font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif !important;
+    font-weight: 600;
+}
+
+.home-banner h2 .green {
+    margin-right: 5px;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.50);
+    font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif !important;
+    font-weight: 600;
+}
+
+.home-banner h1 {
+    margin-top: 0;
+}
+
+.home-banner .btn,
+.home-banner ul {
+    margin: 10px;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.50);
+}
+
+.home-banner .btn-secure {
+    background: #8CC152;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 24px;
+}
+
+.home-banner .btn-secure:hover,
+.home-banner .btn-secure:focus {
+    color: #fff;
+}
+
+.home-banner ..vcparent {
+    margin: auto 0;
+    width: 100%;
+}
+/* What is SSL? */
+
+.whatisssl {
+    color: #fff;
+    background: url(../images/gplaypattern.png);
+    background-repeat: repeat;
+    background-color: #999;
+    padding: 20px;
+}
+
+.whatisssl .container {
+    padding: 0;
+}
+
+.whatisssl h1 {
+    font-size: 72px;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+    margin-top: 8px;
+    margin-bottom: 0;
+    white-space: nowrap;
+    font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif !important;
+    font-weight: 600;
+}
+
+.whatisssl h1 .green {
+    font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif !important;
+    font-weight: 600;
+}
+
+.whatisssl h3 {
+    color: #333;
+    text-shadow: 1px 1px 0px rgba(100, 100, 100, 0.5);
+    font-size: 29px;
+    margin-top: 0;
+    white-space: nowrap;
+    font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif !important;
+    font-weight: 600;
+}
+
+.whatisssl #video {
+    padding: 0;
+    border: 5px #555 solid;
+    border-radius: 5px;
+}
+
+.plans {
+    padding-top: 20px;
+}
+
+.plans h3 {
+    font-size: 35px;
+    font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif !important;
+    font-weight: 600;
+}
+
+.plans h4 {
+    font-size: 24px;
+    text-align: center;
+}
+
+.plans h5 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.plans .pricing-panel {
+    position: relative;
+}
+
+.plans .pricing-panel-content,
+.hpanel {
+    font-size: 18px;
+}
+
+.plans .price {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 15px;
+}
+
+.plans .fa-lock {
+    color: #eeee00;
+    font-size: 48px;
+}
+
+.plans .panel {
+    padding: 0;
+}
+
+.plans .btn-secure {
+    background: #8CC152;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 24px;
+    color: #fff;
+    font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif !important;
+    font-weight: 600;
+}
+
+.plans .btn-secure:hover,
+.plans .btn-secure:focus {
+    color: #fff;
+}
+
+.faq {
+    background: url(../images/gplaypattern.png);
+    background-repeat: repeat;
+    background-color: #ddd;
+}
+
+@media only screen and (max-width: 768px) {
+    .home-banner {
+        padding: 0;
+    }
+    .home-banner .col-xs-12 {
+        padding: 15px;
+        text-align: center;
+    }
+    .home-banner #getSecure {
+        font-size: 28px;
+        padding: 10px;
+        font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif !important;
+        font-weight: 600;
+        width: 100%;
+        margin: 0;
+    }
+}

@@ -1,0 +1,9 @@
+.faq .panel-heading a {
+    color: #444;
+    text-decoration: none;
+}
+
+.faq .panel-title {
+    font-size: 18px;
+    font-weight: 600;
+}

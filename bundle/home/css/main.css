@@ -1,0 +1,204 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 0 !important;
+}
+/* Helpers */
+
+.bold {
+    font-weight: 600;
+}
+
+.darkgreen {
+    color: #689636;
+}
+
+.green {
+    color: #8CC152 !important;
+}
+
+.checkmark {
+    font-size: 20px;
+}
+
+.red {
+    color: #d33;
+}
+
+h1,
+h2 {
+    color: #fff;
+}
+
+h1 .green,
+h2 .green {
+    font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif !important;
+    font-weight: 600;
+}
+
+.home-banner div .green {
+    display: inline-block;
+}
+
+td .green {
+    display: block;
+}
+
+.white {
+    color: #F5F7FA;
+}
+
+.hparent {
+    overflow: hidden;
+    position: relative;
+}
+
+.hchild {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.vparent {
+    display: table;
+    table-layout: fixed;
+}
+
+.vcparent {
+    display: table;
+    table-layout: fixed;
+    height: 100%;
+    margin: auto;
+}
+
+.vcparent {
+    margin: auto;
+}
+
+.vchild {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.container {
+    max-width: 1000px;
+}
+
+.list-inline {
+    padding: 5px 0;
+}
+
+.list-inline > li > a,
+.list-inline:hover > li > a,
+.list-inline:active > li > a,
+.list-inline:visited > li > a {
+    color: #fff;
+}
+
+/* Root Styles */
+
+body {
+    overflow-x: hidden;
+}
+
+.titleBlock {
+    /*text-align: center;*/
+    background: url(../images/gplaypatternblack.png);
+    background-repeat: repeat;
+/*    min-height: 175px;
+    max-height: 250px;*/
+    padding: 15px 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+.titleBlock h1 {
+    font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif !important;
+    font-weight: 600;
+    color: #fff;
+}
+
+.titleBlock h2 {
+    color: white;
+    font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif !important;
+    font-size: 32px;
+}
+
+.headerBlock {
+    padding: 20px 0;
+    font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif !important;
+    font-weight: 600;
+    color: #444;
+}
+
+h1.headerBlock {
+        font-size: 56px;
+}
+
+h2.headerBlock {
+        font-size: 48px;
+}
+
+.btn,
+.btn:active {
+    box-shadow: none;
+}
+
+.certificates h2,
+.products .panel-heading h2,
+.products .panel-heading h3 {
+    font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif !important;
+    font-weight: 600;
+}
+
+.certificates a {
+    text-decoration: none;
+    color: 0;
+}
+
+.certificates .panel-title {
+    font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif !important;
+    font-weight: 600;
+    font-size: 24px;
+    color: #444;
+}
+
+.certificates .btn-buy {
+    font-family: HelveticaNeue-CondensedBold, 'Roboto Condensed', sans-serif !important;
+    font-weight: 600;
+    font-size: 20px;
+    color: #333;
+}
+
+.comparison-chart .panel-heading h3 {
+    color: #444;
+}
+
+.comparison-chart .btn-secure {
+    background: #8CC152;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.resell {
+    background: url(../images/gplaypatternlightgrey.png);
+    background-repeat: repeat;
+}
+
+@media only screen and (max-width: 768px) {
+    .headerBlock {
+        padding: 30px 0;
+        font-size: 36px;
+        margin: 0;
+    }
+    section {
+        padding: 0;
+    }
+}
+
+#merchgreen {
+    color: #8CC152 !important;
+    text-align: center !important;
+}
