@@ -1,3 +1,14 @@
+<style>
+	.nav-tab-wrapper {
+		margin-bottom: 20px !important;
+	}
+
+	input[type="text"],
+	textarea {
+		width: 100%;
+		padding: 12px;
+	}
+</style>
 <div class="wrap">
 	<div id="icon-themes" class="icon32"></div>
 	<h2>Custom Code by <a href="https://www.ssl.com"><img src="http://sslcom.github.io/bootstrap-hpanel/images/SSLcom-Dark.svg" height="30"></a></h2>

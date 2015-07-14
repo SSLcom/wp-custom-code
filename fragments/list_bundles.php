@@ -1,4 +1,3 @@
-<br>
 <a href="?page=sslcom_cc&tab=<?php echo $active_tab?>&bundle" class="button button-primary button-large">Create new bundle</a>
 <br><br>
 <table class="wp-list-table widefat fixed striped">

@@ -1,4 +1,3 @@
-<br>
 <?php
 if (isset($_GET['bundle'])) {
 	$prepath = $root . '/bundle/' . $_GET['bundle'];
@@ -59,7 +58,7 @@ if ($_GET["edit"] !== "" && (!isset($code) || $code == "")) {
 $code = htmlspecialchars($code);
 ?>
 <br><br>
-<textarea name="code" rows="10" cols="30" placeholder="Enter code here"><?php echo $code?></textarea>
-<br>
-<button class="button button-primary button-large">Save .<?php echo $active_tab?> file</button>
+<textarea name="code" rows="20" placeholder="Enter code here"><?php echo $code?></textarea>
+<br><br>
+<button class="button button-primary button-large">Save <?php echo ($_GET['edit'] !== '') ? $_GET['edit'] : '.' . $active_tab . ' file'?></button>
 </form>
