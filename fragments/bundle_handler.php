@@ -8,7 +8,6 @@ function rrmdir($dir) {
 			} else {
 				unlink($dir . "/" . $object);
 			}
-
 		}
 		reset($objects);
 		rmdir($dir);
@@ -23,7 +22,11 @@ if (isset($_GET['delete'])) {
 		include_once correctpath($path . '/list_bundles.php');
 	}
 } elseif (isset($_GET['bundle']) && $_GET['bundle'] !== '') {
-	include_once correctpath($path . '/browse_bundle.php');
+	if (isset($_GET['folder'])) {
+		include_once correctpath($path . '/new_folder.php');
+	} else {
+		include_once correctpath($path . '/browse_bundle.php');
+	}
 } elseif (isset($_GET['bundle']) && $_GET['bundle'] == '') {
 	include_once correctpath($path . '/new_bundle.php');
 } else {

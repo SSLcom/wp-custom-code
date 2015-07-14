@@ -15,9 +15,6 @@ function getCurrentURL() {
 	$currentURL .= $_SERVER["REQUEST_URI"];
 	return $currentURL;
 }
-function redirect($url) {
-	echo '<script type="text/javascript">window.location.href="' . $url . '";</script>';
-}
 //Write code to file
 if (isset($_POST["title"])) {
 	$code = htmlspecialchars_decode(stripslashes($_POST["code"]));

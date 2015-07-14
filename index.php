@@ -10,6 +10,9 @@ Author URI: https://www.ssl.com
 License: MIT
  */
 
+function redirect($url) {
+	echo '<script type="text/javascript">window.location.href="' . $url . '";</script>';
+}
 function correctpath($path) {
 	return str_replace(array('/', '\\'), DIRECTORY_SEPARATOR, $path);
 }
