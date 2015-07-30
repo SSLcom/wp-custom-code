@@ -8,7 +8,7 @@ while (isset($_GET['sub' . $i])) {
 	$i++;
 }
 if (isset($_POST['title']) && $_POST['title'] != '') {
-	mkdir($prepath . '/' . $_POST['title'], 775);
+	mkdir($prepath . '/' . $_POST['title'], 0755);
 	redirect('?page=sslcom_cc&tab=' . $active_tab . '&bundle=' . $_GET['bundle'] . $presub);
 }
 ?>
