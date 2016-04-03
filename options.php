@@ -12,9 +12,9 @@
 <div class="wrap">
 	<div id="icon-themes" class="icon32"></div>
 	<h2>Custom Code by <a href="https://www.ssl.com"><img src="http://sslcom.github.io/bootstrap-hpanel/images/SSLcom-Dark.svg" height="30"></a></h2>
-	<?php settings_errors();?>
 
 <?php
+settings_errors();
 $active_tab = isset($_GET['tab']) ? $_GET['tab'] : 'welcome';
 $root = dirname(__FILE__);
 ?>
