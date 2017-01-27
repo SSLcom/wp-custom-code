@@ -10,6 +10,10 @@ Author URI: https://www.ssl.com
 License: MIT
  */
 
+if (!defined('SSLCOM_CC_EDIT')) {
+	define('SSLCOM_CC_EDIT', true);
+}
+
 function redirect($url) {
 	echo '<script type="text/javascript">window.location.href="' . $url . '";</script>';
 }
@@ -143,4 +147,5 @@ function ch_essentials_admin() {
 function sslcom_cc_index() {
 	include_once correctpath(dirname(__FILE__) . '/' . "options.php");
 }
+
 ?>

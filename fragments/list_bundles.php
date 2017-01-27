@@ -16,7 +16,7 @@ if ($handle = opendir(correctpath($root . '/bundle'))) {
 			echo "<td>[$active_tab name=$entry]</td>";
 			echo '<td style="text-align: right;">';
 			echo '<a href="?page=sslcom_cc&tab=' . $active_tab . '&bundle=' . $entry . '">Browse</a> ';
-			echo '<a href="?page=sslcom_cc&tab=' . $active_tab . '&delete=' . $entry . '">Delete</a>';
+			if (SSLCOM_CC_EDIT) echo '<a href="?page=sslcom_cc&tab=' . $active_tab . '&delete=' . $entry . '">Delete</a>';
 			echo '</td>';
 			echo '</tr>';
 		}

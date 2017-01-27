@@ -14,8 +14,8 @@ if ($handle = opendir(correctpath($root . '/' . $active_tab))) {
 			echo "<tr>";
 			echo "<td>$entry</td>";
 			echo "<td>[$active_tab name=$entry]</td>";
-			echo '<td style="text-align: right;"><a href="?page=sslcom_cc&tab=' . $active_tab . '&edit=' . $entry . '">Edit</a> ';
-			echo '<a href="?page=sslcom_cc&tab=' . $active_tab . '&delete=' . $entry . '">Delete</a></td>';
+			if (SSLCOM_CC_EDIT) echo '<td style="text-align: right;"><a href="?page=sslcom_cc&tab=' . $active_tab . '&edit=' . $entry . '">Edit</a> ';
+			if (SSLCOM_CC_EDIT) echo '<a href="?page=sslcom_cc&tab=' . $active_tab . '&delete=' . $entry . '">Delete</a></td>';
 			echo '</tr>';
 		}
 	}

@@ -27,12 +27,12 @@ if ($handle = opendir($path)) {
 			echo "<td>$entry</td>";
 			echo '<td style="text-align: right;">';
 			if (is_file(correctpath($path . "/" . $entry))) {
-				echo '<a href="?page=sslcom_cc&tab=' . $active_tab . '&bundle=' . $_GET['bundle'] . $presub . '&edit=' . $entry . '">Edit</a> ';
+				if (SSLCOM_CC_EDIT) echo '<a href="?page=sslcom_cc&tab=' . $active_tab . '&bundle=' . $_GET['bundle'] . $presub . '&edit=' . $entry . '">Edit</a> ';
 			} else {
 				$sub = $presub . '&sub' . $i . '=' . $entry;
 				echo '<a href="?page=sslcom_cc&tab=' . $active_tab . '&bundle=' . $_GET['bundle'] . $sub . '">Browse</a> ';
 			}
-			echo '<a href="?page=sslcom_cc&tab=' . $active_tab . $presub . '&delete=' . $entry . '">Delete</a>';
+			if (SSLCOM_CC_EDIT) echo '<a href="?page=sslcom_cc&tab=' . $active_tab . $presub . '&delete=' . $entry . '">Delete</a>';
 			echo '</td>';
 			echo '</tr>';
 		}
