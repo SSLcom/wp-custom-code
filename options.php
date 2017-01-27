@@ -30,26 +30,26 @@ $root = dirname(__FILE__);
 
 <?php
 if (isset($_GET['edit'])) {
-	include_once correctpath($root . "/fragments/edit_code.php");
+	include_once correctpath($root . "/src/edit_code.php");
 } elseif (isset($_GET['delete']) && $_GET['delete'] !== '' && $active_tab !== 'bundle') {
 	$file = correctpath($root . "/" . $active_tab . "/" . $_GET['delete']);
 	if (file_exists($file)) {
 		unlink($file);
 		echo '<div class="updated"><p>$file has been deleted</p></div>';
-		include_once correctpath($root . '/fragments/list_code.php');
+		include_once correctpath($root . '/src/list_code.php');
 	}
 } else {
 	switch ($active_tab) {
 		case "welcome":
-			include_once correctpath($root . "/fragments/welcome.php");
+			include_once correctpath($root . "/src/welcome.php");
 			break;
 
 		case "bundle":
-			include_once correctpath($root . "/fragments/bundle_handler.php");
+			include_once correctpath($root . "/src/bundle_handler.php");
 			break;
 
 		default:
-			include_once correctpath($root . '/fragments/list_code.php');
+			include_once correctpath($root . '/src/list_code.php');
 			break;
 	}
 }
