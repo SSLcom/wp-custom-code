@@ -4,7 +4,7 @@
  * The admin-specific functionality of the plugin.
  *
  * @link       https://www.ssl.com
- * @since      1.0.0
+ * @since      2.0.0
  *
  * @package    Sslcom_Content_Management
  * @subpackage Sslcom_Content_Management/admin
@@ -25,7 +25,7 @@ class Sslcom_Content_ManagementAdmin {
 	/**
 	 * The ID of this plugin.
 	 *
-	 * @since    1.0.0
+	 * @since    2.0.0
 	 * @access   private
 	 * @var      string    $Sslcom_Content_Management    The ID of this plugin.
 	 */
@@ -34,7 +34,7 @@ class Sslcom_Content_ManagementAdmin {
 	/**
 	 * The version of this plugin.
 	 *
-	 * @since    1.0.0
+	 * @since    2.0.0
 	 * @access   private
 	 * @var      string    $version    The current version of this plugin.
 	 */
@@ -43,7 +43,7 @@ class Sslcom_Content_ManagementAdmin {
 	/**
 	 * Initialize the class and set its properties.
 	 *
-	 * @since    1.0.0
+	 * @since    2.0.0
 	 * @param      string    $Sslcom_Content_Management       The name of this plugin.
 	 * @param      string    $version    The version of this plugin.
 	 */
@@ -57,7 +57,7 @@ class Sslcom_Content_ManagementAdmin {
 	/**
 	 * Register the stylesheets for the admin area.
 	 *
-	 * @since    1.0.0
+	 * @since    2.0.0
 	 */
 	public function enqueue_styles() {
 
@@ -80,7 +80,7 @@ class Sslcom_Content_ManagementAdmin {
 	/**
 	 * Register the JavaScript for the admin area.
 	 *
-	 * @since    1.0.0
+	 * @since    2.0.0
 	 */
 	public function enqueue_scripts() {
 

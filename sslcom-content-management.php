@@ -9,14 +9,14 @@
  * that starts the plugin.
  *
  * @link              https://www.ssl.com
- * @since             1.0.0
+ * @since             2.0.0
  * @package           Sslcom_Content_Management
  *
  * @wordpress-plugin
  * Plugin Name:       WordPress Plugin Boilerplate
  * Plugin URI:        https://www.ssl.com/sslcom-content-management-uri/
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
- * Version:           1.0.0
+ * Version:           2.0.0
  * Author:            Aaron Dancer or Your Company
  * Author URI:        https://www.ssl.com/
  * License:           GPL-2.0+
@@ -64,7 +64,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-sslcom-content-management.
  * then kicking off the plugin from this point in the file does
  * not affect the page life cycle.
  *
- * @since    1.0.0
+ * @since    2.0.0
  */
 function run_Sslcom_Content_Management() {
 
