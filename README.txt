@@ -45,7 +45,7 @@ e.g.
 
 1. Upload `sslcom-content-management.php` to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Place `<?php do_action('plugin_name_hook'); ?>` in your templates
+1. Place `<?php do_action('Sslcom_Content_Managementhook'); ?>` in your templates
 
 == Frequently Asked Questions ==
 

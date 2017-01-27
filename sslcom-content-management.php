@@ -36,7 +36,7 @@ if ( ! defined( 'WPINC' ) ) {
  */
 function activate_plugin_name() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-sslcom-content-management-activator.php';
-	Plugin_Name_Activator::activate();
+	Sslcom_Content_ManagementActivator::activate();
 }
 
 /**
@@ -45,7 +45,7 @@ function activate_plugin_name() {
  */
 function deactivate_plugin_name() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-sslcom-content-management-deactivator.php';
-	Plugin_Name_Deactivator::deactivate();
+	Sslcom_Content_ManagementDeactivator::deactivate();
 }
 
 register_activation_hook( __FILE__, 'activate_plugin_name' );

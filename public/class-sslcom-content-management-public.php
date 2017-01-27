@@ -20,7 +20,7 @@
  * @subpackage Plugin_Name/public
  * @author     Your Name <email@example.com>
  */
-class Plugin_Name_Public {
+class Sslcom_Content_ManagementPublic {
 
 	/**
 	 * The ID of this plugin.
@@ -65,10 +65,10 @@ class Plugin_Name_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Plugin_Name_Loader as all of the hooks are defined
+		 * defined in Sslcom_Content_ManagementLoader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Plugin_Name_Loader will then create the relationship
+		 * The Sslcom_Content_ManagementLoader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
@@ -88,10 +88,10 @@ class Plugin_Name_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Plugin_Name_Loader as all of the hooks are defined
+		 * defined in Sslcom_Content_ManagementLoader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Plugin_Name_Loader will then create the relationship
+		 * The Sslcom_Content_ManagementLoader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */

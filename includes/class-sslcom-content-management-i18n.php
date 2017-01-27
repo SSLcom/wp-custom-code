@@ -24,7 +24,7 @@
  * @subpackage Plugin_Name/includes
  * @author     Your Name <email@example.com>
  */
-class Plugin_Name_i18n {
+class Sslcom_Content_Managementi18n {
 
 
 	/**
