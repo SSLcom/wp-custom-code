@@ -3,7 +3,7 @@
 /**
  * Fired during plugin deactivation
  *
- * @link       http://example.com
+ * @link       https://www.ssl.com
  * @since      1.0.0
  *
  * @package    Sslcom_Content_Management

@@ -8,17 +8,17 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              http://example.com
+ * @link              https://www.ssl.com
  * @since             1.0.0
  * @package           Sslcom_Content_Management
  *
  * @wordpress-plugin
  * Plugin Name:       WordPress Plugin Boilerplate
- * Plugin URI:        http://example.com/sslcom-content-management-uri/
+ * Plugin URI:        https://www.ssl.com/sslcom-content-management-uri/
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
  * Version:           1.0.0
  * Author:            Aaron Dancer or Your Company
- * Author URI:        http://example.com/
+ * Author URI:        https://www.ssl.com/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       sslcom-content-management
