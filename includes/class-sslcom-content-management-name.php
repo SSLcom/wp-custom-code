@@ -25,7 +25,7 @@
  * @since      1.0.0
  * @package    Sslcom_Content_Management
  * @subpackage Sslcom_Content_Management/includes
- * @author     Your Name <email@example.com>
+ * @author     Aaron Dancer <me@aarondancer.com>
  */
 class Sslcom_Content_Management {
 
