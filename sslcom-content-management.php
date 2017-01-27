@@ -10,7 +10,7 @@
  *
  * @link              http://example.com
  * @since             1.0.0
- * @package           Plugin_Name
+ * @package           Sslcom_Content_Management
  *
  * @wordpress-plugin
  * Plugin Name:       WordPress Plugin Boilerplate
@@ -34,7 +34,7 @@ if ( ! defined( 'WPINC' ) ) {
  * The code that runs during plugin activation.
  * This action is documented in includes/class-sslcom-content-management-activator.php
  */
-function activate_plugin_name() {
+function activate_Sslcom_Content_Management() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-sslcom-content-management-activator.php';
 	Sslcom_Content_ManagementActivator::activate();
 }
@@ -43,13 +43,13 @@ function activate_plugin_name() {
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-sslcom-content-management-deactivator.php
  */
-function deactivate_plugin_name() {
+function deactivate_Sslcom_Content_Management() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-sslcom-content-management-deactivator.php';
 	Sslcom_Content_ManagementDeactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_plugin_name' );
-register_deactivation_hook( __FILE__, 'deactivate_plugin_name' );
+register_activation_hook( __FILE__, 'activate_Sslcom_Content_Management' );
+register_deactivation_hook( __FILE__, 'deactivate_Sslcom_Content_Management' );
 
 /**
  * The core plugin class that is used to define internationalization,
@@ -66,10 +66,10 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-sslcom-content-management.
  *
  * @since    1.0.0
  */
-function run_plugin_name() {
+function run_Sslcom_Content_Management() {
 
-	$plugin = new Plugin_Name();
+	$plugin = new Sslcom_Content_Management();
 	$plugin->run();
 
 }
-run_plugin_name();
+run_Sslcom_Content_Management();

@@ -6,8 +6,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/admin
+ * @package    Sslcom_Content_Management
+ * @subpackage Sslcom_Content_Management/admin
  */
 
 /**
@@ -16,8 +16,8 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the admin-specific stylesheet and JavaScript.
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/admin
+ * @package    Sslcom_Content_Management
+ * @subpackage Sslcom_Content_Management/admin
  * @author     Your Name <email@example.com>
  */
 class Sslcom_Content_ManagementAdmin {
@@ -27,9 +27,9 @@ class Sslcom_Content_ManagementAdmin {
 	 *
 	 * @since    1.0.0
 	 * @access   private
-	 * @var      string    $plugin_name    The ID of this plugin.
+	 * @var      string    $Sslcom_Content_Management    The ID of this plugin.
 	 */
-	private $plugin_name;
+	private $Sslcom_Content_Management;
 
 	/**
 	 * The version of this plugin.
@@ -44,12 +44,12 @@ class Sslcom_Content_ManagementAdmin {
 	 * Initialize the class and set its properties.
 	 *
 	 * @since    1.0.0
-	 * @param      string    $plugin_name       The name of this plugin.
+	 * @param      string    $Sslcom_Content_Management       The name of this plugin.
 	 * @param      string    $version    The version of this plugin.
 	 */
-	public function __construct( $plugin_name, $version ) {
+	public function __construct( $Sslcom_Content_Management, $version ) {
 
-		$this->plugin_name = $plugin_name;
+		$this->Sslcom_Content_Management = $Sslcom_Content_Management;
 		$this->version = $version;
 
 	}
@@ -73,7 +73,7 @@ class Sslcom_Content_ManagementAdmin {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/sslcom-content-management-admin.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->Sslcom_Content_Management, plugin_dir_url( __FILE__ ) . 'css/sslcom-content-management-admin.css', array(), $this->version, 'all' );
 
 	}
 
@@ -96,7 +96,7 @@ class Sslcom_Content_ManagementAdmin {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/sslcom-content-management-admin.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->Sslcom_Content_Management, plugin_dir_url( __FILE__ ) . 'js/sslcom-content-management-admin.js', array( 'jquery' ), $this->version, false );
 
 	}
 

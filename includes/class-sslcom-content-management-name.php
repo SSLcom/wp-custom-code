@@ -9,8 +9,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package    Sslcom_Content_Management
+ * @subpackage Sslcom_Content_Management/includes
  */
 
 /**
@@ -23,11 +23,11 @@
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package    Sslcom_Content_Management
+ * @subpackage Sslcom_Content_Management/includes
  * @author     Your Name <email@example.com>
  */
-class Plugin_Name {
+class Sslcom_Content_Management {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -44,9 +44,9 @@ class Plugin_Name {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      string    $plugin_name    The string used to uniquely identify this plugin.
+	 * @var      string    $Sslcom_Content_Management    The string used to uniquely identify this plugin.
 	 */
-	protected $plugin_name;
+	protected $Sslcom_Content_Management;
 
 	/**
 	 * The current version of the plugin.
@@ -68,7 +68,7 @@ class Plugin_Name {
 	 */
 	public function __construct() {
 
-		$this->plugin_name = 'sslcom-content-management';
+		$this->Sslcom_Content_Management = 'sslcom-content-management';
 		$this->version = '1.0.0';
 
 		$this->load_dependencies();
@@ -149,7 +149,7 @@ class Plugin_Name {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Sslcom_Content_ManagementAdmin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new Sslcom_Content_ManagementAdmin( $this->get_Sslcom_Content_Management(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -165,7 +165,7 @@ class Plugin_Name {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Sslcom_Content_ManagementPublic( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new Sslcom_Content_ManagementPublic( $this->get_Sslcom_Content_Management(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -188,8 +188,8 @@ class Plugin_Name {
 	 * @since     1.0.0
 	 * @return    string    The name of the plugin.
 	 */
-	public function get_plugin_name() {
-		return $this->plugin_name;
+	public function get_Sslcom_Content_Management() {
+		return $this->Sslcom_Content_Management;
 	}
 
 	/**
