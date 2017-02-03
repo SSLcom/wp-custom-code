@@ -13,14 +13,14 @@
  * @package           Sslcom_Content_Management
  *
  * @wordpress-plugin
- * Plugin Name:       WordPress Plugin Boilerplate
+ * Plugin Name:       SSL.com Content Management
  * Plugin URI:        https://www.ssl.com/sslcom-content-management-uri/
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       A plugin by SSL.com that allows you to insert custom HTML, PHP, CSS, and JavaScript via shortcodes
  * Version:           2.0.0
- * Author:            Aaron Dancer or Your Company
+ * Author:            SSL.com
  * Author URI:        https://www.ssl.com/
- * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * License:           MIT
+ * License URI:       https://opensource.org/licenses/MIT
  * Text Domain:       sslcom-content-management
  * Domain Path:       /languages
  */
